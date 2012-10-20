@@ -39,11 +39,11 @@
 	<?php echo $this->scripts(); ?>
 </head>
 <body data-spy="scroll" data-target=".bs-docs-sidebar">
-	<div id="container">
+	<div id="container" class="container">
 		<div id="header">
 			<?	echo $this->_render('element', 'header');?>
 		</div>
-		<div id="content">
+		<div id="content" class="container" >
 			<?php echo $this->content(); ?>
 		</div>
 	</div>

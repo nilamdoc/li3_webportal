@@ -22,11 +22,12 @@
             </ul>
           </div>
 			<?php
-		  	$search = array("url"=>"/Search", "class"=>"navbar-search pull-right form-search form-inline");
+		  	$search = array("url"=>"/Search", "class"=>"navbar-search pull-right form-search");
 			echo $this->form->create(null,$search);
-			echo $this->form->field('SearchText', array("value"=>$_REQUEST['SearchText'],"class"=>"search-query span2","placeholder"=>"Search","label"=>"")); 
-			echo $this->form->submit('go', array("class"=>"btn")); 
-			
+			echo "<div class='input-append'>";
+			echo $this->form->text('SearchText', array("value"=>$_REQUEST['SearchText'],"class"=>"search-query span2","placeholder"=>"type in your search...","label"=>"")); 
+			echo $this->form->submit("Search",array('class'=>'btn'));
+			echo "</div>";
 			echo $this->form->end();
 			?>
         </div>
