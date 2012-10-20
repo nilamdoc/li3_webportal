@@ -10,6 +10,10 @@
 <html>
 <head>
 	<?php echo $this->html->charset();?>
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
 	<title><?php echo $this->title(); ?></title>
 	<?php echo $this->html->style(array('/bootstrap/docs/assets/css/bootstrap')); ?>
 	<?php echo $this->html->style(array('/bootstrap/docs/assets/css/bootstrap-responsive')); ?>	
@@ -34,7 +38,7 @@
 	$this->scripts('<script src="/bootstrap/docs/assets/js/bootstrap-typeahead.js"></script>'); 
 	$this->scripts('<script src="/bootstrap/docs/assets/js/bootstrap.js"></script>'); 
 	$this->scripts('<script src="/bootstrap/docs/assets/js/bootstrap.min.js"></script>'); 
-
+	$this->scripts('<script src="/ckeditor/ckeditor.js"></script>');
 	?>   		
 	<?php echo $this->scripts(); ?>
 </head>
@@ -44,6 +48,7 @@
 			<?	echo $this->_render('element', 'header');?>
 		</div>
 		<div id="content" class="container" >
+			<textarea name="Content" class="ckeditor" id="Content"></textarea>			
 			<?php echo $this->content(); ?>
 		</div>
 	</div>
