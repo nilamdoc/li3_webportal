@@ -26,6 +26,7 @@
 			echo $this->form->create(null,$search);
 			echo $this->form->field('SearchText', array("value"=>$_REQUEST['SearchText'],"class"=>"search-query span2","placeholder"=>"Search","label"=>"")); 
 			echo $this->form->submit('go', array("class"=>"btn")); 
+			
 			echo $this->form->end();
 			?>
         </div>
