@@ -10,22 +10,43 @@
 <html>
 <head>
 	<?php echo $this->html->charset();?>
-	<title>Application &gt; <?php echo $this->title(); ?></title>
-	<?php echo $this->html->style(array('debug', 'lithium')); ?>
-	<?php echo $this->scripts(); ?>
+	<title><?php echo $this->title(); ?></title>
+	<?php echo $this->html->style(array('/bootstrap/docs/assets/css/bootstrap')); ?>
+	<?php echo $this->html->style(array('/bootstrap/docs/assets/css/bootstrap-responsive')); ?>	
+	<?php echo $this->html->style(array('/bootstrap/docs/assets/css/docs')); ?>	
 	<?php echo $this->html->link('Icon', null, array('type' => 'icon')); ?>
+
+	<?php
+	$this->scripts('<script src="/bootstrap/docs/assets/js/jquery.js"></script>'); 
+	$this->scripts('<script src="/bootstrap/docs/assets/js/application.js"></script>'); 
+	$this->scripts('<script src="/bootstrap/docs/assets/js/bootstrap-affix.js"></script>'); 
+	$this->scripts('<script src="/bootstrap/docs/assets/js/bootstrap-alert.js"></script>'); 
+	$this->scripts('<script src="/bootstrap/docs/assets/js/bootstrap-button.js"></script>'); 
+	$this->scripts('<script src="/bootstrap/docs/assets/js/bootstrap-carousel.js"></script>'); 
+	$this->scripts('<script src="/bootstrap/docs/assets/js/bootstrap-collapse.js"></script>'); 
+	$this->scripts('<script src="/bootstrap/docs/assets/js/bootstrap-dropdown.js"></script>'); 
+	$this->scripts('<script src="/bootstrap/docs/assets/js/bootstrap-modal.js"></script>'); 
+	$this->scripts('<script src="/bootstrap/docs/assets/js/bootstrap-popover.js"></script>'); 
+	$this->scripts('<script src="/bootstrap/docs/assets/js/bootstrap-scrollspy.js"></script>'); 
+	$this->scripts('<script src="/bootstrap/docs/assets/js/bootstrap-tab.js"></script>'); 
+	$this->scripts('<script src="/bootstrap/docs/assets/js/bootstrap-tooltip.js"></script>'); 
+	$this->scripts('<script src="/bootstrap/docs/assets/js/bootstrap-transition.js"></script>'); 
+	$this->scripts('<script src="/bootstrap/docs/assets/js/bootstrap-typeahead.js"></script>'); 
+	$this->scripts('<script src="/bootstrap/docs/assets/js/bootstrap.js"></script>'); 
+	$this->scripts('<script src="/bootstrap/docs/assets/js/bootstrap.min.js"></script>'); 
+
+	?>   		
+	<?php echo $this->scripts(); ?>
 </head>
-<body class="app">
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
 	<div id="container">
 		<div id="header">
-			<h1>Application</h1>
-			<h2>
-				Powered by <?php echo $this->html->link('Lithium', 'http://lithify.me/'); ?>.
-			</h2>
+			<?	echo $this->_render('element', 'header');?>
 		</div>
 		<div id="content">
 			<?php echo $this->content(); ?>
 		</div>
 	</div>
+
 </body>
 </html>
