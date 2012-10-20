@@ -7,3 +7,8 @@ This is using a common Lithium framwork which is in a seperate directory. So ple
 {{{
 define('LITHIUM_LIBRARY_PATH', dirname('f:/Apache/www/TBG/lithium'));
 }}}
+
+
+Build status
+-----------
+[![Build Status](https://secure.travis-ci.org/nilamdoc/li3_webportal.png?branch=master)](http://travis-ci.org/nilamdoc/li3_webportal)
